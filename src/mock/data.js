@@ -20,7 +20,7 @@ export const aboutData = {
   img: 'profile.jpg',
   paragraphOne: "Hi there! My name is Brian. I'm from Illinois, and I currently study Web Development at Purdue University.",
   paragraphTwo: "Front-End Development is my strength, and I have experience building websites in both professional settings and on my own.",
-  paragraphThree: "When I'm not making websites, I like to play sports, play video games, and hang out with my dog Buddy.",
+  paragraphThree: "When I'm not making websites, I like to hang out with friends, watch NBA games, and play video games.",
   resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
 };
 
