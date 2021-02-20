@@ -11,6 +11,7 @@ const Projects = () => {
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  let count = 0;
 
   useEffect(() => {
     if (window.innerWidth > 769) {
@@ -27,9 +28,11 @@ const Projects = () => {
       <Container>
         <div className="project-wrapper">
           <Title title="Projects" />
+          
           {projects.map((project) => {
             const { title, info, info2, url, repo, img, id } = project;
-
+            count++;
+            console.log(count)
             return (
               <Row key={id}>
                 <Col lg={4} sm={12}>
@@ -49,14 +52,37 @@ const Projects = () => {
                         </p>
                         <p className="mb-4">{info2 || ''}</p>
                       </div>
-                      <a
+                      
+                      {count === 1 ?
+                        <div className="sfp-btn-container"> 
+                        <a
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cta-btn cta-btn--hero"
+                        href={'https://andersontree.co/'}
+                        >Anderson Tree Co.</a>
+                        <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-btn cta-btn--hero cta-btn-sfp"
+                        href={'https://maximuslogisticscompany.com/'}
+                        >Maximus Logistics</a>
+                        <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-btn cta-btn--hero"
+                        href={'https://www.chrisjkimball.com/'}
+                        >CJK Consulting</a>
+                        </div>
+                        :
+                        <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-btn cta-btn--hero cta-btn-sfp"
                         href={url || '#!'}
                       >
                         See Live
-                      </a>
+                      </a>}
 
                       {repo && (
                         <a
@@ -86,7 +112,7 @@ const Projects = () => {
                         aria-label="Project Link"
                         rel="noopener noreferrer"
                       >
-                        <Tilt
+                        {/* <Tilt
                           options={{
                             reverse: false,
                             max: 8,
@@ -98,17 +124,18 @@ const Projects = () => {
                             reset: true,
                             easing: 'cubic-bezier(.03,.98,.52,.99)',
                           }}
-                        >
+                        > */}
                           <div data-tilt className="thumbnail rounded">
                             <ProjectImg alt={title} filename={img} />
                           </div>
-                        </Tilt>
+                        {/* </Tilt> */}
                       </a>
                     </div>
                   </Fade>
                 </Col>
               </Row>
             );
+
           })}
         </div>
       </Container>
