@@ -9,7 +9,7 @@ export const headData = {
 
 // HERO DATA
 export const heroData = {
-  title: 'Hi, my name is ',
+  title: 'My name is ',
   name: 'Brian.',
   subtitle: 'I am a Web Developer.',
   cta: 'Know more',
@@ -18,7 +18,7 @@ export const heroData = {
 // ABOUT DATA
 export const aboutData = {
   img: 'profile.jpg',
-  paragraphOne: "Hello! My name is Brian. I'm from Illinois, and I currently study Web Development at Purdue University.",
+  paragraphOne: "Hello! My name is Brian. I'm from Illinois, and I am a graduate of Purdue University.",
   paragraphTwo: "Front-End Development is my strength, and I have experience building websites in both professional settings and on my own.",
   paragraphThree: "When I'm not making websites, I like to hang out with friends, watch NBA games, and play video games.",
   resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
